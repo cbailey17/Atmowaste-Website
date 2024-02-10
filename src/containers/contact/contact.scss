@@ -1,0 +1,223 @@
+.subtext {
+  color: var(--color-text);
+}
+
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+  min-height: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0;
+      overflow: hidden;
+      display: block;
+      clear: both;
+      position: relative;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    outline: none;
+    width: 100%;
+    border: 0;
+    background: #115173;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #115173;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 150px;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 53px;
+    font-family: "Coolvetica";
+    color: #ffd700;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: -10px;
+
+    &:before {
+      content: "<h1>";
+      font-family: "La Belle Aurore", cursive;
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      left: -10px;
+      opacity: 0.6;
+      line-height: 18px;
+    }
+
+    &:after {
+      content: "<h1/>";
+      font-family: "La Belle Aurore", cursive;
+      color: #ffd700;
+      font-size: 18px;
+      line-height: 18px;
+      position: absolute;
+      left: -30px;
+      bottom: -20px;
+      margin-left: 20px;
+      opacity: 0.6;
+    }
+  }
+
+  .flat-button {
+    // color: var(--color-subtext);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    // border: 1px solid var(--color-subtext);
+    background-image: var(--gradient-button) !important;
+    // box-shadow: 3px 1px 20px #eee;
+    float: left;
+    //border-radius: 4px;
+    background: 0 0;
+    text-transform: uppercase;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+.map-wrap {
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  //   width: 53%;
+  height: 115%;
+  margin-top: -3%;
+}
+
+.leaflet-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}
+
+#head {
+  color: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-map {
+  position: absolute;
+  background: #000;
+  top: 50px;
+  right: 30%;
+  z-index: 999999;
+  width: 267px;
+  padding: 20px;
+  color: #fff;
+  font-family: "Helvetica";
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .map-wrap {
+    // float: none;
+    // margin: 0;
+    width: 100%;
+    height: 400px;
+  }
+
+  .info-map {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 2250px) {
+}
+
+@media screen and (max-width: 1750px) {
+}
+
+@media screen and (max-width: 1050px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 490px) {
+}
+
+.tags {
+  opacity: 0.8;
+  bottom: 0;
+  font-size: 18px;
+  font-family: "La Belle Aurore", cursive;
+}
+
+#contactUs {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.8rem;
+
+  &:hover {
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
